@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+   		<!-- Database connection settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+		<property name="hibernate.connection.username">mapeo</property>
+		<property name="hibernate.connection.password">mapeo</property>
+
+		<!-- Configuracion del pool interno -->
+		<property name="connection.pool_size">10</property>
+
+
+		<!-- Dialecto de la base de datos -->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+
+		<!-- ESTA LINEA PERMITE QUE SE CREE LA TABLA EN PRINCIPIO Y VAYA ACTUALIZANDO 
+			LA INFORMACION -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="use_sql_comments">true</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		
+		
+		
+		<!-- Mapeo de Resources y clases-->
+		
+	  	<!-- 
+	  	<mapping class="model.Embeddable.Person"/>
+		<mapping class="model.Embeddable.Phone"/>   
+	
+		<mapping class="model.Embeddable2.User"/>
+		<mapping class="model.Embeddable2.ContactAddress"/> 
+		
+    	<mapping class="model.asociacionBidi.Bid"/> 
+		<mapping class="model.asociacionBidi.Item"/>
+		
+		
+		<mapping class="model.OneToOneSharedPrimaryKey.User"/>
+		<mapping class="model.OneToOneSharedPrimaryKey.Address"/>
+		
+		
+		<mapping class="model.OneToOneForeignKey.User"/>
+		<mapping class="model.OneToOneForeignKey.Address"/>
+
+	
+		<mapping class="model.OneToOneForeignKey2.User"/>
+		<mapping class="model.OneToOneForeignKey2.Address"/>
+	
+		<mapping class="model.OneToOneForeignKey3.Item"/>
+		<mapping class="model.OneToOneForeignKey3.Shipment"/>
+		<mapping class="model.OneToOneForeignKey3.ShipmentState"/>
+	   
+		<mapping class="model.OneToManyBag.Item"/>
+		<mapping class="model.OneToManyBag.Bid"/>
+
+ 
+		<mapping class="model.OneToManyList.Item"/>
+		<mapping class="model.OneToManyList.Bid"/>
+	  
+		<mapping class="model.OneToManyJoinTable.Item"/>
+		<mapping class="model.OneToManyJoinTable.User"/>
+	
+		<mapping class="model.OneToManyEmbeddable.Address"/>
+		<mapping class="model.OneToManyEmbeddable.User"/>
+		<mapping class="model.OneToManyEmbeddable.Shipment"/> 
+		
+-->	
+	
+		<mapping class="model.ManyToManyBidi.Category"/>
+		<mapping class="model.ManyToManyBidi.Item"/>
+
+
+	
+	
+	</session-factory>
+</hibernate-configuration>
