@@ -51,7 +51,7 @@ public class ManyToManyBidirectional {
 		Item someItem2 = new Item("Some Item B");
 		Item someItem3 = new Item("Some Item C");
 		
-		System.out.println("Hola");
+		System.out.println("Hola + mndo");
 		
 		categoria1.getItems().add(someItem1);  // CATEGORY 1 PERSISTE 3 TIPOS DE ITEMS
 		categoria1.getItems().add(someItem2);
